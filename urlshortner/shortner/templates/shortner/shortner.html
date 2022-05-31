@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Url Shortner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+  	<div class="container w-50 mt-4">
+    <div class="card">
+  <h5 class="card-header text-white bg-dark">Url Shortner</h5>
+  <div class="card-body">
+  	<form action="/" method="post">{% csrf_token %}
+    <input type="text" name="url" class="form-control" placeholder="Please Enter Your URL">
+    {%if url %}
+    <div class="bg-light mt-2 form-control text-success">{{url}}</div>
+    {%else%}
+    <div class="bg-light mt-3 form-control text-success">Have A Nice Day &#128515;</div>
+    
+    {%endif%}
+    <button type="submit" class="btn btn-dark mt-3">Short It</button>
+    </form>
+  </div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
